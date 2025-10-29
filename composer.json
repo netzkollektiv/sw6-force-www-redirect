@@ -1,0 +1,31 @@
+{
+  "name": "netzkollektiv/force-www-redirect",
+  "description": "Redirects between www and non-www based on configuration, preserving the full request URI.",
+  "type": "shopware-platform-plugin",
+  "version": "1.0.0",
+  "license": "MIT",
+  "extra": {
+    "shopware-plugin-class": "Netzkollektiv\\ForceWwwRedirect\\NetzkollektivForceWwwRedirect",
+    "label": {
+      "en-GB": "Force WWW Redirect",
+      "de-DE": "WWW-Weiterleitung erzwingen"
+    },
+    "description": {
+      "en-GB": "Redirect non-www to www or www to non-www (configurable), preserving the request URI.",
+      "de-DE": "Leitet non-www zu www oder www zu non-www um (konfigurierbar) und behält die Anfrage-URI bei."
+    }
+  },
+  "require": {
+    "shopware/core": "^6.6.0 || ^6.7.0"
+  },
+  "autoload": {
+    "psr-4": {
+      "Netzkollektiv\\ForceWwwRedirect\\": "src/"
+    }
+  },
+  "scripts": {
+      "sw-format": "docker run --rm -v $(pwd):/ext shopware/shopware-cli extension format /ext",
+      "sw-validate": "docker run --rm -v $(pwd):/ext shopware/shopware-cli extension validate --full /ext",
+      "sw-zip": "docker run --rm -v $(pwd):/ext shopware/shopware-cli extension zip /ext"
+  }
+}

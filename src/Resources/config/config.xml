@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<config xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xsi:noNamespaceSchemaLocation="https://raw.githubusercontent.com/shopware/platform/trunk/src/Core/System/SystemConfig/Schema/config.xsd">
+
+    <card>
+        <title>Redirect Settings</title>
+        <title lang="de-DE">Weiterleitungseinstellungen</title>
+        
+        <input-field type="bool">
+            <name>enableForceWww</name>
+            <label>Enable redirect to www</label>
+            <label lang="de-DE">Weiterleitung zu www aktivieren</label>
+            <helpText>Redirects all non-www requests to www</helpText>
+            <helpText lang="de-DE">Leitet alle Anfragen ohne www zu www um</helpText>
+            <defaultValue>false</defaultValue>
+        </input-field>
+
+        <input-field type="bool">
+            <name>enableForceNonWww</name>
+            <label>Enable redirect to non-www</label>
+            <label lang="de-DE">Weiterleitung zu non-www aktivieren</label>
+            <helpText>Redirects all www requests to non-www</helpText>
+            <helpText lang="de-DE">Leitet alle Anfragen mit www zu non-www um</helpText>
+            <defaultValue>false</defaultValue>
+        </input-field>
+    </card>
+</config>
